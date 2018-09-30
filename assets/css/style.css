@@ -1,0 +1,129 @@
+h1 {
+    color: rgb(73, 115, 194);
+    font-family: 'Fahkwang', sans-serif;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+}
+
+body {
+    background: url("../images/background.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+
+#title-box {
+    background-color:  rgb(236, 230, 230);
+    padding: .5em;
+    margin-left: 10em;
+    margin-right: 10em; 
+}
+
+#buttons-box {
+    background-color:  rgba(221, 221, 218, 0.24);
+    padding: 1em;
+    padding-bottom: 5em;
+    margin-left: 10em;
+    margin-right: 10em;
+}
+
+#gif-box {
+    color: rgb(236, 230, 230);
+    padding: 1em;
+    padding-bottom: 5em;
+    margin-left: 10em;
+    margin-right: 10em;
+}
+
+.btn, .btn-primary, .btn-md {
+   background-color: rgb(73, 115, 194);
+   color: rgb(236, 230, 230);
+   margin: .4em;
+   padding: .5em;
+}
+
+#movie-input {
+    margin-top: 3em;
+    margin-top: 2em;
+    padding: .4em;
+    float: left;
+}
+
+#gif-button {
+    margin-top: 3em;
+    margin-top: 2em;
+    float: left;
+    padding: .3em;  
+}
+
+#gif-container {
+    background-color: rgb(236, 230, 230);
+    padding: 5em;
+}
+
+.gifs {
+    display: flex;
+    justify-content: space-around;
+}
+
+p {
+    color: rgb(73, 115, 194); 
+    font-weight: 600;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+
+
+/* Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    #gif-button{
+        #title-box {
+            background-color:  rgba(221, 221, 218, 0.24);
+            padding: .5em;
+            margin-left: 15em;
+            margin-right: 15em; 
+        }
+        
+        #buttons-box {
+            background-color:  rgba(221, 221, 218, 0.24);
+            padding: 1em;
+            padding-bottom: 5em;
+            margin-left: 15em;
+            margin-right: 15em;
+        }
+        
+        #gif-box {
+            color: rgb(236, 230, 230);
+            padding: 1em;
+            padding-bottom: 5em;
+            margin-left: 15em;
+            margin-right: 15em;
+        }
+    }
+    */
+
+/* Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {#gif-button {
+    margin-right: .5em;
+    }
+
+/* Medium devices (tablets, 768px and up) */
+/* @media (min-width: 768px)  {
+    #gif-button {
+    margin-right: .5em;
+    }
+  
+Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    #gif-button{
+    margin-right: 1.5em;
+    } 
+   
+/* Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    #gif-button {
+      margin-right: 1.8em;
+    }
+   */
