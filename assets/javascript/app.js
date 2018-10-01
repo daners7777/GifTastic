@@ -20,14 +20,23 @@ $(document).ready(function () {
         }
     }
 
+  
     // Adding click event listener to all buttons
     $("#gif-button").on("click", function () {
         // Grabbing and storing the property value from the button
         var movie = $("#movie-input").val().toUpperCase();
         movies.push(movie);
         ButtonCreate();
-        return false;
-    })
+        return false;  
+    });
+
+    $("#movie-input").keydown(function(event){
+        if(event.keyCode == 13){
+            ButtonCreate();
+            $('#movie-input').val("");
+            return false
+        }
+        });
 
     //on click to call GifDisplay function
     $(document).on("click", ".movie", GifDisplay);

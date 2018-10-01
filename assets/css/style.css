@@ -62,9 +62,15 @@ body {
     padding: 5em;
 }
 
-.gifs {
+#populate-gifs {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: space-between;
+    padding: 1em;
+}
+
+.gif {
+    margin: 1em;
 }
 
 p {
@@ -72,6 +78,7 @@ p {
     font-weight: 600;
     padding: 1em;
     text-transform: uppercase;
+    text-align: left
 }
 
 
