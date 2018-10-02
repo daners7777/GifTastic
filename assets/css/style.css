@@ -82,55 +82,26 @@ p {
 }
 
 
-
-/* Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-    #gif-button{
-        #title-box {
-            background-color:  rgba(221, 221, 218, 0.24);
-            padding: .5em;
-            margin-left: 15em;
-            margin-right: 15em; 
-        }
-        
-        #buttons-box {
-            background-color:  rgba(221, 221, 218, 0.24);
-            padding: 1em;
-            padding-bottom: 5em;
-            margin-left: 15em;
-            margin-right: 15em;
-        }
-        
-        #gif-box {
-            color: rgb(236, 230, 230);
-            padding: 1em;
-            padding-bottom: 5em;
-            margin-left: 15em;
-            margin-right: 15em;
-        }
+@media screen and (max-width: 800px) {
+    #title-box {
+        padding: .5em;
+        margin-left: 2em;
+        margin-right: 2em; 
     }
-    */
-
-/* Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {#gif-button {
-    margin-right: .5em;
+    
+    #buttons-box {
+        padding: 1em;
+        padding-bottom: 5em;
+        margin-left: 2em;
+        margin-right: 2em;
     }
-
-/* Medium devices (tablets, 768px and up) */
-/* @media (min-width: 768px)  {
-    #gif-button {
-    margin-right: .5em;
+    
+    #gif-box {
+        padding-bottom: 5em;
+        margin-left: 2em;
+        margin-right: 2em;
     }
-  
-Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-    #gif-button{
-    margin-right: 1.5em;
-    } 
-   
-/* Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-    #gif-button {
-      margin-right: 1.8em;
+    .gif {
+        margin: -1em;
     }
-   */
+}
