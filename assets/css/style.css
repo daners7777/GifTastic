@@ -103,5 +103,6 @@ p {
     }
     .gif {
         margin: -1em;
+        width: 100%;
     }
 }
