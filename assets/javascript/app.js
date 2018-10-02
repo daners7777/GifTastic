@@ -1,7 +1,8 @@
 //JavaScript doesn't get run until the HTML is finished loading
 $(document).ready(function () {
 
-    var mykey = config.MY_KEY;
+    //gitignore key variable
+    var myKey = config.MY_KEY;
    
     //Movies array
     var movies = ["FIGHT CLUB", "ALMOST FAMOUS", "THE DARK KNIGHT", "THE EMPIRE STRIKES BACK", "JURASSIC PARK", "MEMENTO",
@@ -50,7 +51,7 @@ $(document).ready(function () {
         $("#populate-gifs").html("");
         var film = $(this).attr("movie-data");
         var random = Math.floor(Math.random() * 21);
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + film + "&limit=10&offset=" + random + config.MY_KEY;
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + film + "&limit=10&offset=" + random + myKey;
 
         // Performing an AJAX request with the queryURL
         $.ajax({
