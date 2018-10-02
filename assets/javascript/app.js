@@ -15,7 +15,7 @@ $(document).ready(function () {
     function buttonCreate() {
         $("#button-display").empty();
         for (var i = 0; i < movies.length; i++) {
-            var movieButton = $("<button class='btn btn-danger'>")
+            var movieButton = $("<button class='btn btn-danger'>");
             movieButton.addClass("movie");
             movieButton.attr("movie-data", movies[i]);
             movieButton.text(movies[i]);
@@ -34,12 +34,12 @@ $(document).ready(function () {
     });
 
     $("#movie-input").keydown(function(event){
-        if(event.keyCode == 13){
+        if(event.keyCode == 13) {
             var movie = $("#movie-input").val().toUpperCase();
             movies.push(movie);
             $("#movie-input").val("");
             buttonCreate();
-            return false
+            return false;
         }
         });
 
@@ -51,7 +51,7 @@ $(document).ready(function () {
         $("#populate-gifs").html("");
         var film = $(this).attr("movie-data");
         var random = Math.floor(Math.random() * 21);
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + film + "&limit=10&offset=" + random + myKey;
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + film + "&limit=10&offset=" + random + "&api_key=" + myKey;
 
         // Performing an AJAX request with the queryURL
         $.ajax({
