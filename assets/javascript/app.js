@@ -1,15 +1,17 @@
 //JavaScript doesn't get run until the HTML is finished loading
 $(document).ready(function () {
 
+    var mykey = config.MY_KEY;
+   
     //Movies array
     var movies = ["FIGHT CLUB", "ALMOST FAMOUS", "THE DARK KNIGHT", "THE EMPIRE STRIKES BACK", "JURASSIC PARK", "MEMENTO",
         "THE SHAWSHANK REDEMPTION", "CATCH ME IF YOU CAN", "ELF", "BACK TO THE FUTURE"];
 
     //Calls functon to create a button    
-    ButtonCreate();
+    buttonCreate();
 
     //Function to create bugton
-    function ButtonCreate() {
+    function buttonCreate() {
         $("#button-display").empty();
         for (var i = 0; i < movies.length; i++) {
             var movieButton = $("<button class='btn btn-danger'>")
@@ -26,27 +28,29 @@ $(document).ready(function () {
         // Grabbing and storing the property value from the button
         var movie = $("#movie-input").val().toUpperCase();
         movies.push(movie);
-        ButtonCreate();
+        buttonCreate();
         return false;  
     });
 
     $("#movie-input").keydown(function(event){
         if(event.keyCode == 13){
-            ButtonCreate();
-            $('#movie-input').val("");
+            var movie = $("#movie-input").val().toUpperCase();
+            movies.push(movie);
+            $("#movie-input").val("");
+            buttonCreate();
             return false
         }
         });
 
     //on click to call GifDisplay function
-    $(document).on("click", ".movie", GifDisplay);
+    $(document).on("click", ".movie", gifDisplay);
 
     //queryURL using the movie name
-    function GifDisplay() {
+    function gifDisplay() {
         $("#populate-gifs").html("");
-        var film = $(this).attr('movie-data');
+        var film = $(this).attr("movie-data");
         var random = Math.floor(Math.random() * 21);
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + film + "&limit=10&offset=" + random + "&api_key=m5t8SlMXW2fnA1PWjsULbCspICYlJ9qK";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + film + "&limit=10&offset=" + random + config.MY_KEY;
 
         // Performing an AJAX request with the queryURL
         $.ajax({
